@@ -1,1 +1,14 @@
-<!-- Affichage de la liste des vols -->
+<div *ngFor="let vol of vols">
+<app-vol [vol]="vol" (volEvent)="clickVol($event)"></app-vol>
+</div>
+
+<!--
+    {
+    "icao": "hi4n9c",
+    "matricule": "AFR157",
+    "compagnie": "Air France",
+    "aeroportDepart": "LFOA",
+    "aeroportArrivee": "LFLL",
+    "passagers": []
+}
+-->

@@ -1,1 +1,14 @@
 <!-- Affichage d'un vol -->
+<div class="container" (click)="clickVol(vol)">
+    <mat-icon>flight_takeoff</mat-icon>
+    <div>{{ vol.matricule}}</div>
+    <div>{{ vol.icao}}</div>
+    <div>{{ vol.compagnie}}</div>
+    <div>{{ vol.aeroportDepart}}</div>
+    <mat-icon>arrow_right_alt</mat-icon>
+    <div *ngIf="vol.aeroportArrivee != null">{{ vol.aeroportArrivee}}</div>
+    <div *ngIf="vol.aeroportArrivee == null">inconnu</div>
+    <div>
+        <img class="img" src="../../../assets/{{vol.compagnie}}.png">
+    </div>
+</div>

@@ -1,1 +1,12 @@
 <!-- Affichage d'un passager -->
+<div >
+    <div matTooltip="{{passager.email}}" class=container>
+        <img [hidden]="!afficherPhoto" src="{{passager.image}}" class = "icone"/>
+        <div>{{passager.nom}}</div>
+        <div [ngStyle]="{'color': passager.classeVol === 'BUSINESS' ? 'red' : passager.classeVol === 'STANDARD' ? 'blue' : 'green' }">{{passager.classeVol}}</div>
+        <div class="flex-row">
+            <mat-icon [ngStyle]="{'color': color}"> local_mall</mat-icon>
+            <div [ngStyle]="{'color': color}">x{{passager.nbBagagesSoute}}</div>
+        </div>
+    </div>
+</div>

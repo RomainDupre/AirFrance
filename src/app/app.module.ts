@@ -24,6 +24,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { ViewAirFranceComponent } from './components/view-airfrance/view-airfrance.component';
 import { VolComponent } from './components/vol/vol.component';
 import { HttpFlightInterceptor } from './interceptors/http-flight.interceptor';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -53,7 +54,8 @@ registerLocaleData(localeFr, 'fr');
     ReactiveFormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatTooltipModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr' },

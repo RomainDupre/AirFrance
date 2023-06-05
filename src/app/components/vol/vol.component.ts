@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Vol } from 'src/app/models/vol.model';
 
 @Component({
   selector: 'app-vol',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./vol.component.scss']
 })
 export class VolComponent {
+  @Input() vol!: Vol;
+  @Output() volEvent: EventEmitter<Vol> = new EventEmitter<Vol>();
 
+  clickVol(vol: Vol): void {
+    this.volEvent.emit(vol);
+  }
 }
